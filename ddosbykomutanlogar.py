@@ -19,6 +19,7 @@ if paketbuyukluk == 1:
             a = open("a.txt")
             soket.send(open("a.txt", "rb").read())
             print("Paket gönderildi!", paket)
+            a.close()
         except:
             print("Paket gönderilemedi!", paket)
 elif paketbuyukluk == 2:
@@ -28,6 +29,7 @@ elif paketbuyukluk == 2:
             a2 = open("a2.txt")
             soket.send(open("a2.txt", "rb").read())
             print("Paket gönderildi!", paket)
+            a2.close()
         except:
             print("Paket gönderilemedi!", paket)
 elif paketbuyukluk == 3:
@@ -35,8 +37,9 @@ elif paketbuyukluk == 3:
     for paket in range(1, 500 + 1):
         try:
             a3 = open("a3.txt")
-            soket.send("a3.txt")
+            soket.send(open("a.txt", "rb").read())
             print("Paket gönderildi!", paket)
+            a3.close()
         except:
             print("Paket gönderilemedi!", paket)
 else:
