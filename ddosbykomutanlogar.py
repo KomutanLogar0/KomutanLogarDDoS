@@ -26,7 +26,7 @@ elif paketbuyukluk == 2:
     for paket in range(1, 500 + 1):
         try:
             a2 = open("a2.txt")
-            soket.send("a2.txt")
+            soket.send(open("a2.txt", "rb").read())
             print("Paket gönderildi!", paket)
         except:
             print("Paket gönderilemedi!", paket)
