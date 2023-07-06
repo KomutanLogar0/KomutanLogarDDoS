@@ -16,30 +16,30 @@ if paketbuyukluk == 1:
     soket.connect(ip, port)
     for paket in range(1, 500 + 1):
         try:
-            a = open("a.txt")
+            f = open("a.txt")
             soket.send(open("a.txt", "rb").read())
             print("Paket gönderildi!", paket)
-            a.close()
+            f.close()
         except:
             print("Paket gönderilemedi!", paket)
 elif paketbuyukluk == 2:
     soket.connect(ip, port)
     for paket in range(1, 500 + 1):
         try:
-            a2 = open("a2.txt")
+            f2 = open("a2.txt")
             soket.send(open("a2.txt", "rb").read())
             print("Paket gönderildi!", paket)
-            a2.close()
+            f2.close()
         except:
             print("Paket gönderilemedi!", paket)
 elif paketbuyukluk == 3:
     soket.connect(ip, port)
     for paket in range(1, 500 + 1):
         try:
-            a3 = open("a3.txt")
+            f3 = open("a3.txt")
             soket.send(open("a.txt", "rb").read())
             print("Paket gönderildi!", paket)
-            a3.close()
+            f3.close()
         except:
             print("Paket gönderilemedi!", paket)
 else:
